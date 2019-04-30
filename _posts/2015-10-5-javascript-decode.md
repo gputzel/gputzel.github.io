@@ -7,8 +7,6 @@ I have been working on a JavaScript version of the Markov Chain Monte Carlo cryp
 
 As in the demo of the Python program from that post, this program has been "trained" on [War and Peace](http://www.gutenberg.org/cache/epub/2600/pg2600.txt). Click the Go button to begin!
 
-{% include decode.html %}
-
 Things you can try:
 
 -   Change the "temperature," which determines the algorithm's tendency to accept trial moves even when they don't immediately lead to higher likelihood. If the temperature is chosen correctly, this can allow the program to escape local "traps." However, if the temperature is too high it will not settle down into a solution!
