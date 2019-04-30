@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}public/css/decode.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="{{ site.baseurl }}public/script/transition.js"></script>
+
+<p id="testing">
+<table border="0">
+    <tr>
+        <td>
+            <p class="label">Ciphertext</p>
+            <p><textarea id="ciphertextArea" rows="16" cols="30">EAIV PYMFYOW OEERWPEV EM FZRVV TAIBA PRYWZEOEIML MN HREERYV TIHH EZYL EAR BIPARYERUE ILPZE ILEM O HRFIDHR PHOILERUE IE EYIRV EM NILQ EAR PRYWZEOEIML EAOE WOUIWIGRV EAR HISRHIAMMQ MN EAR YRVZHEILF MZEPZE EAIV HISRHIAMMQ IV BOHBZHOERQ DOVRQ ML NYRCZRLBIRV MN OQXOBRLE HREERY POIYV IL EAR EYOILILF ERUE EAR HMLFRY KMZY BIPARYERUE IV EAR ROVIRY IE IV NMY EAR PYMFYOW EM QRBMQR IE KMZ BOL BYROER KMZY MTL BIPARYERUEV DK EKPILF PHOILERUE ILEM EAR BIPARYERUE ILPZE DMU OLQ EARL EZYLILF EAR ERWPRYOEZYR TOK ZP</textarea></p>
+            <p class="label" id="temp">Temperature: 3.0</p>
+            <p>
+            <input type="range" name="tempInput" min="0.01" max="25" step="0.5" value="3"
+                onchange="T=this.value;document.getElementById('temp').innerHTML='Temperature: ' + this.value"
+                oninput="T=this.value;document.getElementById('temp').innerHTML='Temperature: ' + this.value"
+                >
+            </p>
+        </td>
+        <td>
+            <p><canvas id="permutationCanvas" width="400" height="550"></canvas></p>
+            <table>
+                <tr>
+                    <td>
+                        <button id="randButton" onclick="resetPermutation();">Randomize Permutation</button>
+                    </td>
+                    <td>
+                        <button id="goButton" onclick="go();" style="width:100px">Go!</button>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <p class="label">Log-Likelihood</p>
+            <p id="likelihood"></p>
+            <p class="label">Output</p>
+            <textarea id="plaintextArea" rows="16" cols="30"></textarea>
+        </td>
+    </tr>
+</table>
+</p>
+<script type="text/javascript" src="{{ site.baseurl }}public/script/decode.js"></script>
