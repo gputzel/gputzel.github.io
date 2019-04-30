@@ -1,0 +1,70 @@
+
+table {
+    padding:0;
+    margin:auto;
+}
+
+td {
+    padding:10px;
+    border: none;
+    margin: none;
+}
+
+.label {
+    text-align:center;
+}
+
+#likelihood {
+    padding:0;
+    margin:auto;
+    display:block;
+}
+
+button,input,select {
+    padding:0;
+    margin:auto;
+    display:block;
+}
+
+body {
+    color:#000000;
+    background-color:#ffffff;
+}
+
+canvas {
+    border:2px solid;
+    padding:0;
+    margin:auto;
+    display:block;
+}
+
+#traininglink {
+    text-align:center;
+}
+
+textarea {
+    font-family:monospace;
+}
+
+svg {
+    font: 10px sans-serif;
+}
+
+.line {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis text {display: none;}
+
+#testing {
+    font-size: 12px;
+}
